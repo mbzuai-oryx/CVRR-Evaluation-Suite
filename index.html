@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<meta property='og:title' content='Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs'/>
+<meta property='og:image' content=''/>
+<meta property='og:description' content=''/>
+<meta property='og:url' content='https://mbzuai-oryx.github.io/CVRR-Evaluation-Suite/'/>
+<meta property='og:image:width' content='1200' />
+<meta property='og:image:height' content='663' />
+<!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+<meta property="og:type" content='website'/>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9VZKE74FPW');
+</script>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs">
+  <meta name="keywords" content="Prompt Learning, Vision-Language models, CLIP, Generalization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="juxtapose/css/juxtapose.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/magnifier.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+
+</head>
+
+<style>
+  @import url('https://fonts.cdnfonts.com/css/menlo');
+</style>
+
+
+<body>
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://muzairkhattak.github.io/">Muhammad Uzair Khattak</a><sup> 1</sup>,</span>
+            <span class="author-block">
+              <a href="https://ferjad.github.io/">Muhammad Ferjad Naeem</a><sup> 2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jameelhassan.github.io/">Jameel Hassan</a><sup>1</sup>,
+            </span>
+              <span class="author-block">
+              <a href="https://muzammal-naseer.com/">Muzammal Naseer</a><sup>1</sup>,
+            </span>
+              <br>
+            <span class="author-block">
+              <a href="https://federicotombari.github.io/"> Federico Tombari</a><sup>3, 4</sup>
+            </span>
+                          <span class="author-block">
+              <a href="https://sites.google.com/view/fahadkhans/home">Fahad Shahbaz Khan</a><sup>1,5</sup>,
+            </span>
+                                        <span class="author-block">
+              <a href="https://salman-h-khan.github.io/">Salman Khan</a><sup>1,6</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Mohamed bin Zayed University of AI,</span>
+            <span class="author-block"><sup>2</sup>ETH Zurich,</span>
+                          <span class="author-block"><sup>3</sup>Google,</span>
+            <span class="author-block"><sup>4</sup>TU Munich,</span>
+                          <span class="author-block"><sup>5</sup>Linkoping University,</span>
+                          <span class="author-block"><sup>6</sup>Australian National University</span>
+
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                                </span>
+                <span class="link-block">
+                  <a href="https://mbzuaiac-my.sharepoint.com/:f:/g/personal/uzair_khattak_mbzuai_ac_ae/EktDA83_8UxJrc23DQfrfv8Bvw41YxWVBgD3Fapxs69rRg?e=1RZIY0" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              <span class="link-block">
+                <a href="https://mbzuai-oryx.github.io/CVRR-Evaluation-Suite/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#bibtex"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-obp"></i>
+                  </span>
+                  <span>BibTex</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <p align="justify"> Motivated by the expanding wide-scale applications of Video Large Multi-modal Models (Video-LMMs), and the lack of complex video understanding benchmarking, we present a new evaluation benchmark,<b> Complex Video Reasoning and Robustness Evaluation Suite (CVRR-ES) </b> for Video-LMMs. CVRR-ES comprehensively evaluates the recent Video-LMMs against their reasoning capabilities over complex videos in the real-world context, and robustness of these models through the lens of user prompts as text queries.  </p>
+
+        <br>
+        <br>
+<img src="./static/images/main_figure.png" >
+     <div class="content has-text-justified">
+<p align="justify"> <b> <span style="color: blue;">Left</span></b>: Our Complex Video Reasoning and Robustness Evaluation Suite (CVRR-ES) comprises 11 diverse video evaluation dimensions encompassing a variety of complex and real-world contexts for evaluating Video Large Multi-modal Models (Video-LMMs). <b><span style="color: blue;">Right</span></b>: Overall performance of recent Video-LMMs on the CVRR-ES benchmark. Results for each Video-LMM are averaged across 11 video dimensions shown on the left.  </p>
+      </div>
+              <div class="column">
+        <div style="text-align:center;" >
+
+           <h4 class="subtitle has-text-centered">
+               <img src="./static/images/intro.png">
+                     </h4>
+               <div class="content has-text-justified">
+<p> We observe that most Video-LMMs struggle to reason over complex videos (rows 1-3) and exhibit weak robustness and rectification capabilities when prompted to generate answers for user questions that can sometimes be confusing (row 4). The QA pairs in our CVRR-Evaluation Suite assess the performance of Video-LMMs beyond general video comprehension.  </p>
+               </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+                 <!-- Visual Effects. -->
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+Recent advancements in Large Language Models (LLMs) have led to the development of Video Large Multi-modal Models (Video-LMMs) that can handle a wide range of video understanding tasks. These models have the potential to be deployed in real-world applications such as robotics, AI assistants, medical imaging, and autonomous vehicles. The widespread adoption of Video-LMMs in our daily lives underscores the importance of ensuring and evaluating their robust performance in mirroring human-like reasoning and interaction capabilities in complex, real-world contexts.
+However, existing benchmarks for Video-LMMs primarily focus on general video comprehension abilities and neglect assessing their reasoning capabilities over complex videos in the real-world context, and robustness of these models through the lens of user prompts as text queries. In this paper, we present the Complex Video Reasoning and Robustness Evaluation Suite (CVRR-ES), a novel benchmark that comprehensively assesses the performance of Video-LMMs across 11 diverse real-world video dimensions. We evaluate 9 recent models, including both open-source and closed-source variants, and find that most of the Video-LMMs, especially open-source ones, struggle with robustness and reasoning when dealing with complex videos. Based on our analysis, we develop a training-free Dual-Step Contextual Prompting (DSCP) technique to enhance the performance of existing Video-LMMs. Our findings provide valuable insights for building the next generation of human-centric AI systems with advanced robustness and reasoning capabilities. Our dataset and code are publicly available.         <br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">CVRR-ES assesses the reasoning and robustness of Video-LMMs on complex videos in real-world contexts.</h2>
+        <div class="content has-text-justified">
+          <p>
+          <h5> <b> Main contributions: </b></h5>
+           <ol>
+             <li> <b>Complex Video Reasoning and Robustness Benchmark: </b> We present CVRR-ES, an open-ended Video Question Answering benchmark designed to assess the reasoning and robustness capabilities of Video-LMMs across 11 diverse world-centric complex video dimensions.</li>
+  <li><b>Comprehensive Evaluation: </b> We evaluate recent Video-LMMs on the CVRR-ES benchmark and find that most models exhibit weak performance, highlighting their limited reasoning in complex videos and lack of robustness towards user text queries.</li>
+  <li><b>Key Analysis:  </b>We conduct extensive analysis and formulate important conclusions about Video-LMMs based on their failure cases and performance on the CVRR-ES benchmark. Our findings provide valuable insights for building the next generation of human-centric AI systems with improved robustness and reasoning capabilities.</li>
+  <li><b>Dual-Step Contextual Prompting Technique:  </b>To improve Video-LMMs' reasoning and robustness abilities, we formulate a model-agnostic, training-free prompting technique that effectively enhances their performance on the CVRR-ES benchmark.</li>
+
+           </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<section class="section">
+  
+    <!--/ Matting. -->
+    <div class="container is-max-desktop">
+    
+    <!-- Latent space editing applications -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">CVRR-Evaluation Suite Overview</h2>
+
+
+        
+        <div class="content has-text-centered">
+            <img src="./static/images/cvrres_stats.png"  style="max-width:90%">
+                                  <p class="content has-text-justified">
+            <b>(Left)</b> Frequency distribution of the type of questions. <b>(Right)</b>  Illustration of the most frequent keywords in the answer-set of CVRR-ES benchmark.
+          </p>
+        </div>
+        <div class="content has-text-justified">
+                      <p>
+            <b>Overview of CVRR-ES dataset.</b> CVRR-ES benchmark consists of 2400 open-ended question-answer (QA) pairs spanning over 214 unique videos for evaluating Video-LMMs. The benchmark aims to assess their robustness to user textual queries and reasoning capabilities in a variety of complex and contextual videos covering 11 diverse evaluation dimensions. The evaluation dimensions are listed below:
+                    <ol>
+                <li> Multiple actions in a single video.</li>
+                <li> Fine-grained action understanding.</li>
+                <li> Partial actions.</li>
+                <li> Time order understanding.</li>
+                <li> Non-existent actions with existent scene depictions.</li>
+                <li> Non-existent actions with non-existent scene depictions.</li>
+                <li> Continuity and object instance count.</li>
+                <li> Unusual and physically anomalous activities.</li>
+                <li> Understanding of emotional context.</li>
+                <li> Interpretation of visual context.</li>
+           </ol>
+          </p>
+We curate robustness (from the lens of complex and confusing user queries) and reasoning based high-quality question answer pairs across the evaluation dimensions in CVRR-ES. Please refer to the main paper for detailed definations about the evaluation dimensions.
+        </div>
+
+      </div>
+    </div>
+
+            <!--/ Matting. -->
+    <div class="container is-max-desktop">
+
+    <!-- Latent space editing applications -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Dual-Step Contextual Prompting technique for Video-LMMs</h2>
+
+
+
+        <div class="content has-text-centered">
+            <img src="./static/images/dscp_method.png"  style="max-width:55%">
+                                  <p class="content has-text-justified">
+<!--            <b>(Left)</b> Frequency distribution of the type of questions. <b>(Right)</b>  Illustration of the most frequent keywords in the answer-set of CVRR-ES benchmark.-->
+          </p>
+        </div>
+        <div class="content has-text-justified">
+                      <p>
+             We note that majority of Video-LMMs are trained using only positive examples and video-conversational templates that are primarily limited to tasks such as video-captioning and video question answering. This leads to highly over-affirmative behavior and a lack of self-rectification abilities against noisy (e.g., confusing) user questions.
+            Additionally, the templates have minimal focus on enhancing reasoning and robustness capabilities through reasoning-based instruction-tuning pairs, resulting in weak performance of such models against robustness and reasoning QA evaluations in the CVRR-ES benchmark.
+          </p>
+            <p>To address these challenges, we introduce a prompting technique for Video-LMMs called <b>Dual-Step Contextual Prompting (DSCP)</b>, which aims to steer Video-LMM focus for enhanced reasoning while simultaneously encouraging the models to provide robust and grounded answers. DSCP is a two-step prompting method that 1) uses principled prompt instructions (<b>above figure, <span style="color: dodgerblue;">shown in blue</span></b>) to ensure that the model comprehends the video while reasoning over crucial aspects of complex video understanding such as contextual information and decoding the complex relationships between objects and motions, etc., and 2) encourages robustness by generating the response against the question while conditioning both on video and the context retrieved in the first step (<b>above figure, <span style="color: forestgreen;">shown in green</span></b>).</p>
+                    <p>DSCP technique effectively enhances the performance of Video-LMMs on the CVRR-ES benchmark. Below we show some qualitative examples of the proposed DSCP method. Please refer to the main paper for more detailed information.</p>
+        </div>
+          <div class="content has-text-centered">
+  <img src="./static/images/dscp_method_qualitative.png" >
+ </div>
+      </div>
+    </div>
+
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">Experimental results on CVRR-Evaluation Suite</h2>
+
+        <div class="content has-text-justified">
+        </p>
+        </div>
+
+                <h3 class="title is-4 has-text-justified">Performance of Video-LMMs on CVRR-ES</h3>
+
+        <div class="content has-text-centered">
+                      <p style="text-align: justify;">
+In below table, we present the evaluation results of Video-LMMs on the 11 dimension categories of the CVRR-ES benchmark. </p>
+
+  <div style="text-align: center;">
+    <table border="1" cellspacing="0" style="font-size: 12px; width: 1080px; border-collapse: collapse; text-align: center; margin:  auto;">
+
+        <thead>
+            <tr>
+                <th colspan="3">Benchmark Category</th>
+                <th>Video-LLaMA2</th>
+                <th>VideoChat</th>
+                <th>Video-ChatGPT</th>
+                <th>Video-LLaVA</th>
+                <th>MovieChat</th>
+                <th>LLaMA-VID</th>
+                <th>TimeChat</th>
+                <th>Gemini-V Pro</th>
+                <th>GPT4V</th>
+                <th>Human</th>
+
+
+
+            </tr>
+            <tr>
+                <td colspan="3">Multiple Actions in single video</td>
+                <td>16.98</td>
+                <td>23.90</td>
+                <td>27.67</td>
+                <td>27.67</td>
+                <td>12.58</td>
+                <td>17.92</td>
+                <td>28.30</td>
+                <td>43.08</td>
+                <td>57.55</td>
+                <th>93.40</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="3">Time order understanding</td>
+                <td>16.45</td>
+                <td>31.58</td>
+                <td>27.63</td>
+                <td>21.05</td>
+                <td>16.45</td>
+                <td>19.74</td>
+                <td>34.21</td>
+                <td>45.39</td>
+                <td>57.89</td>
+                <th>97.37</th>
+            </tr>
+            <tr>
+                <td colspan="3">Non-existent actions with existent scene</td>
+                <td>10.14</td>
+                <td>15.22</td>
+                <td>23.19</td>
+                <td>5.07</td>
+                <td>5.07</td>
+                <td>2.90</td>
+                <td>23.19</td>
+                <td>57.25</td>
+                <td>71.01</td>
+                <th>97.10</th>
+            </tr>
+            <tr >
+                <td colspan="3">Non-existent actions with non-existent scene</td>
+                <td>13.19</td>
+                <td>14.58</td>
+                <td>17.36</td>
+                <td>3.47</td>
+                <td>11.81</td>
+                <td>6.94</td>
+                <td>13.89</td>
+                <td>49.64</td>
+                <td>75.00</td>
+                <th>100.00</th>
+            </tr>
+            </tr>
+            <tr>
+                <td colspan="3">Continuity and Object instance Count</td>
+                <td>28.25</td>
+                <td>24.29</td>
+                <td>28.41</td>
+                <td>21.47</td>
+                <td>19.77</td>
+                <td>24.86</td>
+                <td>34.46</td>
+                <td>36.16</td>
+                <td>62.71</td>
+                <th>96.49</th>
+            </tr>
+                    </tr>
+            <tr >
+                <td colspan="3">Unusual and Physically Anomalous activities</td>
+                <td>18.95</td>
+                <td>18.42</td>
+                <td>18.95</td>
+                <td>15.79</td>
+                <td>17.89</td>
+                <td>16.32</td>
+                <td>27.37</td>
+                <td>60.00</td>
+                <td>74.74</td>
+                <th>96.84</th>
+            </tr>
+                    </tr>
+            <tr >
+                <td colspan="3">Interpretation of social context</td>
+                <td>25.00</td>
+                <td>31.07</td>
+                <td>32.50</td>
+                <td>18.93</td>
+                <td>17.14</td>
+                <td>13.93</td>
+                <td>39.29</td>
+                <td>64.29</td>
+                <td>79.64</td>
+                <th>97.51</th>
+            </tr>
+                    </tr>
+            <tr >
+                <td colspan="3">Understanding of emotional context</td>
+                <td>21.92</td>
+                <td>23.63</td>
+                <td>21.23</td>
+                <td>15.07</td>
+                <td>13.70</td>
+                <td>14.73</td>
+                <td>27.40</td>
+                <td>47.26</td>
+                <td>66.44</td>
+                <th>95.55</th>
+            </tr>
+            <tr >
+                <td colspan="3">Interpretation of visual context</td>
+                <td>32.60</td>
+                <td>34.43</td>
+                <td>27.84</td>
+                <td>19.78</td>
+                <td>21.25</td>
+                <td>23.08</td>
+                <td>45.05</td>
+                <td>63.00</td>
+                <td>82.42</td>
+                <th>94.87</th>
+            </tr>
+            <tr style="background-color: #e6e6ff;">
+                <th colspan="3" >Average</th>
+                <td>21.62</td>
+                <td>25.78</td>
+                <td>24.96</td>
+                <td>15.92</td>
+                <td>16.41</td>
+                <td>16.46</td>
+                <td>32.89</td>
+                <td>53.20</td>
+                <td>70.78</td>
+                <th>96.67</th>
+            </tr>
+        </tbody>
+    </table>
+      <p style="text-align: justify;"> We present results for both open-source and closed-source models, alongside human evaluation results which serves as the upper bound on the benchmark.          </p>
+
+  </div>
+
+<br/>
+
+        </div>
+
+ </div>
+
+        </div>
+                <div class="content has-text-justified">
+                 <h3 class="title is-4 has-text-justified">Effectiveness of DSCP method for improving Video-LMMs performance</h3>
+
+                  <p align="justify"> We next integrate DSCP technique with Video-LMMs and present results on the CVRR-ES benchmark in below Figure. The results indicate that DSCP improves the model's performance compared with models that use standard prompting (i.e., using only the question itself). Gains of DSCP technique are <b><span style="color: forestgreen;">shown in green</span>.</b></p>
+          <div class="content has-text-centered">
+  <img src="./static/images/bar_plot_after_rectification.png" style="max-width:55%">
+        <h3 class="title is-4 has-text-justified">ProText performs favourably well in Cross-dataset benchmark</h3>
+        <div class="content has-text-justified">
+          <p>
+We study the contribution of each step of DSCP and compare it with chain-of-thought prompting \cite{wei2022chain}. The results for the top 5 performing Video-LMMs are shown in the below Table. </div>
+
+        <div class="content has-text-centered">
+                <table border="1" cellspacing="0" style="width: 800px; border-collapse: collapse; text-align: left; margin:  auto;">
+
+        <thead>
+            <tr>
+                <th colspan="2">Prompting Method</th>
+                <th colspan="2">VideoChat</th>
+                <th colspan="2">Video-LLaVA</th>
+                <th colspan="2">MovieChat</th>
+                <th colspan="2">LLaMA-VID</th>
+                <th colspan="2">TimeChat</th>
+
+
+
+            </tr>
+            <tr>
+                <td colspan="2">Standard prompting</td>
+                <td colspan="2">25.78 </td>
+                <td colspan="2">15.92</td>
+                <td colspan="2">16.41</td>
+                <td colspan="2">16.46</td>
+                <td colspan="2">32.89</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">Chain of Thought (CoT)</td>
+                <td colspan="2">22.44</td>
+                <td colspan="2">25.87</td>
+                <td colspan="2">15.89</td>
+                <td colspan="2">29.68</td>
+                <th colspan="2">39.57</th>
+
+            </tr>
+            <tr style="background-color: #e6e6ff;">
+                <td colspan="2">DSCP (Stage 1)</td>
+                <td colspan="2">38.07</td>
+                <td colspan="2">28.40</td>
+                <td colspan="2">28.05</td>
+                <td colspan="2">26.41</td>
+                <td colspan="2">33.04</td>
+
+            </tr>
+            <tr style="background-color: #e6e6ff;">
+                <td colspan="2">DSCP (Both stages)</td>
+                <th colspan="2">47.92</th>
+                <th colspan="2">37.93</th>
+                <th colspan="2">35.87</th>
+                <th colspan="2">46.85</th>
+                <td colspan="2">39.45</td>
+
+            </tr>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+<!--            <p  style="text-align: justify;">DSCP stage 1 uses only the principled instructions designed in step 1, while DSCP (Both stages) uses the complete dual-step prompting technique.</p>-->
+<br/>
+
+             <h3 class="title is-4 has-text-justified">Main findings and Qualitative Results </h3>
+                <div class="content has-text-justified">
+          <p>
+Based on the results of Video-LMMs on CVRR-ES, we draw key findings and show qualitative results. These insights can serve as valuable guidance for developing the next generation of Video-LMMs, aiming to make them more robust and reliable when deployed in real-world applications.   </p>
+      <p>
+          1) <b> Models excelling at standard VQA benchmarks struggle on CVRR-ES benchmark. </b> Latest open-source Video-LMMs such as Video-LLaVA, MovieChat, and LLaMA-VID which are state-of-the-art on standard VQA benchmarks performs less effectively on the CVRR-ES benchmark.
+     This suggests that current VQA benchmarks, like ActivityNet-QA and MSRVTT, do not adequately correlate with the complex video reasoning and robustness scenarios highlighted in our benchmark. Consequently, this also indicates that most newer Video-LMMs are heavily trained to excel on general video comprehension benchmarks while reducing their generalizability, reasoning, and robustness capabilities.
+      </p>
+                          <p>
+          2) <b> Over-affirmative behavior of open-source Video-LMMs. </b> Another important observation about open-source models is their tendency to exhibit excessively positive and affirmative responses. As shown in Figure below, open-source Video-LMMs consistently respond with "Yes," even when faced with confusing questions that describe non-existent actions and objects. This highlights the vulnerability of these models when interacting with users in real-world scenarios.
+      </p>
+                                  <div class="item item-sunflowers">
+
+                <img src="./static/images/over_affirmative.png"/>
+              </div>
+                    <br>
+                                              <p>
+          3) <b> Tendency towards activity completion. </b> Most open-source Video-LMMs have shown weak performance on the evaluation dimension of partial actions in CVRR-ES, which contains videos focusing on incomplete or atomic actions. In Figure below, it can be observed that most open-source models tend to complete actions, even when only part of the action is provided in the video. To improve the performance of Video-LMMs, it is crucial to incorporate diverse action types during training, including partial and incomplete actions.
+      </p>
+                                  <div class="item item-sunflowers">
+
+                <img src="./static/images/partial_actions.png"/>
+              </div>
+                    <br>
+                                              <p>
+          4) <b> Weak Generalization to extreme OOD videos. </b> With the exception of GPT4V and Gemini, Video-LMMs struggle with this dimension, indicating weak generalizability towards OOD videos containing the coexistence of unusual objects and activities that are extremely rare in typical videos.
+      </p>
+                                  <div class="item item-sunflowers">
+
+                <img src="./static/images/ood_examples.png"/>
+              </div>
+                    <br>
+                                              <p>
+          5) <b> Limited understanding of temporal order in complex videos. </b> The CVRR-ES benchmark results show that Video-LMMs perform relatively better on the fine-grained action dimension compared to the time-order understanding dimension. We present failure cases related to this dimension in the Figure below..
+      </p>
+                                  <div class="item item-sunflowers">
+
+                <img src="./static/images/temporal.png"/>
+              </div>
+                                        <br>
+                                              <p>
+          6) <b> Video-LMMs struggles in understanding the emotional and social context. </b> The lower performance of Video-LMMs on social and emotional contextual dimensions in CVRR-ES highlights their limitations and lack of understanding of scenes based on contextual cues. For instance, as shown in Fig. \ref{fig:contextual_examples} (bottom), GPT-4V struggles to comprehend a scene where a worker is attempting to prevent shoes from getting wet due to the rain by moving them under the shade.
+      </p>
+                                  <div class="item item-sunflowers">
+
+                <img src="./static/images/contextual.png"/>
+              </div>
+        </div>
+
+
+
+        <h3 class="title is-4 has-text-justified">Conclusion</h3>
+        <div class="content has-text-justified">
+          <p>
+Given the expanding role of Video-LMMs in practical world-centric applications, it is vital to ensure that these models perform robustly and exhibit human-like reasoning and interaction capabilities across various complex and real-world contexts. In this work, we present the CVRR-ES benchmark for Video-LMMs, aiming to evaluate Video-LMMs on these very fronts. Through extensive evaluations, we find that Video-LMMs, especially open-source ones, exhibit limited robustness and reasoning capabilities over complex videos involving real-world contexts. Based on our analysis, we formulate a training-free prompting technique that effectively improves the performance of Video-LMMs across various evaluation dimensions of the CVRR-ES benchmark. Furthermore, we analyze and investigate the failure cases of Video-LMMs on the CVRR-ES benchmark and deduce several important findings. We hope that the CVRR-ES benchmark, accompanied by our extensive analysis, will contribute towards building the next generation of advanced world-centric video understanding models.     </p>
+     <br><p>For additional details about CVRR-Evaluation suite and experimental results, please refer to our main paper. Thank you!</p>
+        </div>
+
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+    <pre><code>@article{Khattak2024cvrres,
+    title={Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs},
+    author={khattak, Muhammad Uzair and Naeem, Muhammad Ferjad and Hassan, Jameel and Muzzamal, Naseer and Tombari, Federcio and Khan, Fahad Shahbaz and Khan, Salman},
+    journal={arXiv:},
+    year={2024}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+<!--          <p>-->
+<!--            This website is licensed under a <a rel="license"-->
+<!--                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative-->
+<!--            Commons Attribution-ShareAlike 4.0 International License</a>.-->
+<!--          </p>-->
+          <p>
+            Website adapted from the following <a href="https://mingukkang.github.io/GigaGAN/">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="juxtapose/js/juxtapose.js"></script>
+
+<script>
+var slider;
+let origOptions = {
+    "makeResponsive": true,
+    "showLabels": true,
+    "mode": "horizontal",
+    "showCredits": true,
+    "animate": true,
+    "startingPosition": "50"
+};
+
+const juxtaposeSelector = "#juxtapose-embed";
+const transientSelector = "#juxtapose-hidden";
+
+  inputImage.src = "./static/images/".concat(name, "_input.jpg")
+  outputImage.src = "./static/images/".concat(name, "_output.jpg")
+
+  let images = [inputImage, outputImage];
+  let options = slider.options;
+  options.callback = function(obj) {
+      var newNode = document.getElementById(obj.selector.substring(1));
+      var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+      console.log(obj.selector.substring(1));
+      console.log(newNode.children[0]);
+      oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+      //newNode.removeChild(newNode.children[0]);
+      
+  };
+  
+  slider = new juxtapose.JXSlider(transientSelector, images, options);
+};
+
+
+
+(function() {
+    slider = new juxtapose.JXSlider(
+        juxtaposeSelector, origImages, origOptions);
+    //document.getElementById("left-button").onclick = replaceLeft;
+    //document.getElementById("right-button").onclick = replaceRight;
+})();
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  // expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = name;
+  // Show the container element (hidden with CSS)
+  // expandImg.parentElement.style.display = "block";
+
+$(".flip-card").click(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("out");
+            $(div_front).removeClass("in");
+
+            $(div_back).addClass("in");
+            $(div_back).removeClass("out");
+
+});
+
+$(".flip-card").mouseleave(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("in");
+            $(div_front).removeClass("out");
+
+            $(div_back).addClass("out");
+            $(div_back).removeClass("in");
+
+});
+
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>    
+
+</body>
+</html>
