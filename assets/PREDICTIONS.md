@@ -1,9 +1,9 @@
 ## Generating Predictions for CVRR-ES dataset from Video-LMMs
 This document provides detailed instructions on generating answers (predictions) from Video-LMMs for video questions in the CVRR-ES benchmark. 
 
-**About the Benchmark:** CVRR-ES benchmark consists of 2400 open-ended question-answer (QA) pairs spanning over 214 unique videos for evaluating Video-LMMs. The benchmark aims to assess their robustness to user textual queries and reasoning capabilities in a variety of complex and contextual videos covering 11 diverse evaluation dimensions.
+**About the Benchmark:** CVRR-ES benchmark consists of 2400 open-ended question-answer (QA) pairs spanning over 214 unique videos (224 videos in total as some videos are used for multiple evaluation dimensions) for evaluating Video-LMMs. The benchmark aims to assess their robustness to user textual queries (e.g., confusing, misleading questions etc.) and reasoning capabilities in a variety of complex and contextual videos covering 11 diverse evaluation dimensions.
 
-**How the predictions are generated?:** For each QA pair of CVRR-ES benchmark, we provide Video-LMM with the question alongside with the corresponding video, which generates prediction answer in an auto-regressive manner. Each QA pair is processed without maintaining the chat history.
+**How the predictions are generated?** For each QA pair of CVRR-ES benchmark, we provide Video-LMM with the question alongside with the corresponding video, which generates prediction answer in an auto-regressive manner. Each QA pair is processed without maintaining the chat history.
 
 Below we provide separate instructions for each model for generating predictions.
 
@@ -21,7 +21,7 @@ cd Video-LMMs-Inference/TimeChat
 # --cvrr_dataset_path is the path that points to the downloaded CVRR-ES folder
 # --output_dir can be any path to save the predictions
 CUDA_VISIBLE_DEVICES=0 python inference_benchmark_cvrres.py \
---all_dimension_folder_path <path-to-CVRR-ES-folder> \
+--cvrr_dataset_path <path-to-CVRR-ES-folder> \
 --output_dir <folder-path-to-save-predictions>
 ```
 
@@ -32,7 +32,7 @@ In order to generate responses using Dual-Step Contextual Prompting (DSCP) metho
 # --cvrr_dataset_path is the path that points to the downloaded CVRR-ES folder
 # --output_dir can be any path to save the predictions
 CUDA_VISIBLE_DEVICES=0 python inference_benchmark_context_cvrres.py \
---all_dimension_folder_path <path-to-CVRR_ES-folder> \
+--cvrr_dataset_path <path-to-CVRR_ES-folder> \
 --output_dir <folder-path-to-save-predictions>
 ```
 
@@ -46,7 +46,7 @@ Follow the steps below to generate answers for Video-LLaVA Video-LMM
 2) Run the following commands to generate predictions for Video-LLaVA using standard prompting (i.e. by asking the question only)
 ```shell
 cd Video-LMMs-Inference/Video-LLaVA
-conda activate TimeChat
+conda activate videollava
 ```
 
 ```shell
@@ -88,7 +88,7 @@ python gemini_base_evaluation.py \
 --cvrr_dataset_path <path-to-CVRR_ES-folder-relative-to-google-cloud-bucket> \
 --output_dir <local-folder-path-to-save-predictions> \
 --google_cloud_bucket_name <name-of-your-google-cloud-bucket> \
---google_cloud_bucket_name <name-of-your-google-cloud-project>
+--google_cloud_project_name <name-of-your-google-cloud-project>
 ```
 
 The above command will generate predictions using the standard prompting method. 
@@ -101,7 +101,7 @@ python gemini_dscp_evaluation.py \
 --cvrr_dataset_path <path-to-CVRR_ES-folder-relative-to-google-cloud-bucket> \
 --output_dir <local-folder-path-to-save-predictions> \
 --google_cloud_bucket_name <name-of-your-google-cloud-bucket> \
---google_cloud_bucket_name <name-of-your-google-cloud-project>
+--google_cloud_project_name <name-of-your-google-cloud-project>
 ```
 
 The generated predictions will be saved into the folder specified by --output_dir argument.

@@ -4,7 +4,7 @@
     <img src="https://i.imgur.com/waxVImv.png" alt="Image">
 </p>
 
-> [**CVRR-ES: Complex Video Reasoning and Robustness Evaluation Suite**]() <br>
+> [**Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs**]() <br>
 > [Muhammad Uzair Khattak](https://muzairkhattak.github.io/), [Muhammad Ferjad Naeem](https://ferjad.github.io/), [Jameel Hassan](https://jameelhassan.github.io/), [Muzammal Naseer](https://muzammal-naseer.com/), [Federico Tombari](https://federicotombari.github.io/), [Fahad Shahbaz Khan](https://sites.google.com/view/fahadkhans/home), [Salman Khan](https://salman-h-khan.github.io/)
 
 **Mohamed bin Zayed University of AI, ETH Zurich,  Australian National University, Technical University of Munich, Linköping University, Google**
@@ -26,7 +26,7 @@ Official GitHub repository for the CVRR-Evaluation Suite
 # :rocket: Release
 * **(May 07, 2024)**
   * CVRR-ES evaluation dataset is released.
-  * Technical report for CVRR-ES benchmark are released.
+  * Technical report for CVRR-ES benchmark is released.
   * This repository supports inference codes for [Video-LLaVA](Video-LMMs-Inference/Video-LLaVA), [TimeChat](Video-LMMs-Inference/TimeChat), [Gemini-Pro-Vision (API)](Video-LMMs-Inference/Gemini-Pro-Vision) and [GPT4-Vision (API) models](Video-LMMs-Inference/GPT4(V)).
   
 ---
@@ -124,7 +124,7 @@ Once the answer predictions are generated from step 1, we utilize LLM as a Judge
 <hr />
 
 ## License
-This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. The videos in CVRR-ES dataset are collected from public academic benchmarks (refer to [main paper]() for more details) and from YouTube and are for academic research use only. 
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. The videos in CVRR-ES dataset are collected from public academic benchmarks (refer to [main paper](https://arxiv.org/pdf/2405.03690) for more details) and from YouTube and are for academic research use only. 
 By using CVRR-ES, you agree not to use the dataset for any harm or unfair discrminiation. Please note that the data in this dataset may be subject to other agreements. Video copyrights belong to the original dataset providers, video creators, or platforms.
 
 

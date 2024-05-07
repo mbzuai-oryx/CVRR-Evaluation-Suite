@@ -21,9 +21,9 @@ python LLM_Judge_evaluation.py --pred_path <predictions-folder-path>\
 --api_key <your-open-ai-key>
 ```
 
-The above command will generate LLM-based results for each evaluation dimension of CVRR-ES benchmark.
+The above command will generate LLM-based results for each evaluation dimension of the CVRR-ES benchmark.
 
-2) Now run the below command to aggregate indiviudal QA scores and print final results. 
+2) Now run the below command to aggregate indiviudal QA scores and display final results. 
 ```shell
 # LLM based evaluation
 python results_parser.py --judge_results_path <path-to-folder-obtained-from-step-1>

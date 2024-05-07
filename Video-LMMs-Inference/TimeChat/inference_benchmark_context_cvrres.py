@@ -70,7 +70,7 @@ print('Initializing Chat')
 args = parse_args()
 cfg = Config(args)
 
-DIR="/share/data/drive_3/muzammal/ckpt/timechat"
+DIR="ckpt/timechat"
 MODEL_DIR=f"{DIR}/timechat_7b.pth"
 
 model_config = cfg.model_cfg

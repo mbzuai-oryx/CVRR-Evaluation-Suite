@@ -55,7 +55,7 @@ args = parse_args()
 cfg = Config(args)
 
 # Please set up the following path
-DIR="/PATH/TO/ckpt/timechat"
+DIR="ckpt/timechat"
 MODEL_DIR=f"{DIR}/timechat_7b.pth"
 
 model_config = cfg.model_cfg
