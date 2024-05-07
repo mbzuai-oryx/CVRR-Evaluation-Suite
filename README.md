@@ -9,9 +9,9 @@
 
 **Mohamed bin Zayed University of AI, ETH Zurich,  Australian National University, Technical University of Munich, Linköping University, Google**
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]()
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2405.03690)
 [![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/uzair_khattak_mbzuai_ac_ae/EktDA83_8UxJrc23DQfrfv8Bvw41YxWVBgD3Fapxs69rRg?e=hU7X5a)
-[![Website](https://img.shields.io/badge/Project-Website-87CEEB)]()
+[![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://mbzuai-oryx.github.io/CVRR-Evaluation-Suite/)
 
 [//]: # ([![video]&#40;https://img.shields.io/badge/video-teaser-orange&#41;]&#40;&#41;)
 
@@ -134,7 +134,7 @@ If you find our work and this repository useful, please consider giving our repo
 @article{Khattak2024cvrres,
     title={Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs},
     author={khattak, Muhammad Uzair and Naeem, Muhammad Ferjad and Hassan, Jameel and Muzzamal, Naseer and Tombari, Federcio and Khan, Fahad Shahbaz and Khan, Salman},
-    journal={arXiv:},
+    journal={arXiv:2405.03690},
     year={2024}
 }
 ```
