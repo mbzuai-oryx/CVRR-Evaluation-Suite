@@ -249,6 +249,7 @@ However, existing benchmarks for Video-LMMs primarily focus on general video com
                 <li> Non-existent actions with non-existent scene depictions.</li>
                 <li> Continuity and object instance count.</li>
                 <li> Unusual and physically anomalous activities.</li>
+                <li> Interpretation of social context.</li>
                 <li> Understanding of emotional context.</li>
                 <li> Interpretation of visual context.</li>
            </ol>
@@ -303,7 +304,7 @@ We curate robustness (from the lens of complex and confusing user queries) and r
 
         <div class="content has-text-centered">
                       <p style="text-align: justify;">
-In below table, we present the evaluation results of Video-LMMs on the 11 dimension categories of the CVRR-ES benchmark. </p>
+In below table, we present the evaluation results of Video-LMMs on the 11 dimension categories of the CVRR-ES benchmark. For each QA pair of CVRR-ES benchmark, we provide Video-LMM with the question alongside with the corresponding video, which generates prediction answer in an auto-regressive manner. Each QA pair is processed without maintaining the chat history. </p>
 
   <div style="text-align: center;">
     <table border="1" cellspacing="0" style="font-size: 12px; width: 1080px; border-collapse: collapse; text-align: center; margin:  auto;">
@@ -330,7 +331,7 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>16.98</td>
                 <td>23.90</td>
                 <td>27.67</td>
-                <td>27.67</td>
+                <td>15.72</td>
                 <td>12.58</td>
                 <td>17.92</td>
                 <td>28.30</td>
@@ -480,10 +481,10 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                   <p align="justify"> We next integrate DSCP technique with Video-LMMs and present results on the CVRR-ES benchmark in below Figure. The results indicate that DSCP improves the model's performance compared with models that use standard prompting (i.e., using only the question itself). Gains of DSCP technique are <b><span style="color: forestgreen;">shown in green</span>.</b></p>
           <div class="content has-text-centered">
   <img src="./static/images/bar_plot_after_rectification.png" style="max-width:55%">
-        <h3 class="title is-4 has-text-justified">ProText performs favourably well in Cross-dataset benchmark</h3>
+        <h3 class="title is-4 has-text-justified">Different prompting techniques</h3>
         <div class="content has-text-justified">
           <p>
-We study the contribution of each step of DSCP and compare it with chain-of-thought prompting \cite{wei2022chain}. The results for the top 5 performing Video-LMMs are shown in the below Table. </div>
+We study the contribution of each step of DSCP and compare it with chain-of-thought prompting method. The results for the top 5 performing Video-LMMs are shown in the below Table. </div>
 
         <div class="content has-text-centered">
                 <table border="1" cellspacing="0" style="width: 800px; border-collapse: collapse; text-align: left; margin:  auto;">
@@ -580,7 +581,7 @@ Based on the results of Video-LMMs on CVRR-ES, we draw key findings and show qua
               </div>
                     <br>
                                               <p>
-          5) <b> Limited understanding of temporal order in complex videos. </b> The CVRR-ES benchmark results show that Video-LMMs perform relatively better on the fine-grained action dimension compared to the time-order understanding dimension. We present failure cases related to this dimension in the Figure below..
+          5) <b> Limited understanding of temporal order in complex videos. </b> The CVRR-ES benchmark results show that Video-LMMs perform relatively better on the fine-grained action dimension compared to the time-order understanding dimension. We present failure cases related to this dimension in the Figure below.
       </p>
                                   <div class="item item-sunflowers">
 
@@ -588,7 +589,7 @@ Based on the results of Video-LMMs on CVRR-ES, we draw key findings and show qua
               </div>
                                         <br>
                                               <p>
-          6) <b> Video-LMMs struggles in understanding the emotional and social context. </b> The lower performance of Video-LMMs on social and emotional contextual dimensions in CVRR-ES highlights their limitations and lack of understanding of scenes based on contextual cues. For instance, as shown in Fig. \ref{fig:contextual_examples} (bottom), GPT-4V struggles to comprehend a scene where a worker is attempting to prevent shoes from getting wet due to the rain by moving them under the shade.
+          6) <b> Video-LMMs struggles in understanding the emotional and social context. </b> The lower performance of Video-LMMs on social and emotional contextual dimensions in CVRR-ES highlights their limitations and lack of understanding of scenes based on contextual cues. For instance, as shown in Figure below (bottom row), GPT-4V struggles to comprehend a scene where a worker is attempting to prevent shoes from getting wet due to the rain by moving them under the shade.
       </p>
                                   <div class="item item-sunflowers">
 
