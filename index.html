@@ -551,13 +551,13 @@ We study the contribution of each step of DSCP and compare it with chain-of-thou
              <h3 class="title is-4 has-text-justified">Main findings and Qualitative Results </h3>
                 <div class="content has-text-justified">
           <p>
-Based on the results of Video-LMMs on CVRR-ES, we draw key findings and show qualitative results. These insights can serve as valuable guidance for developing the next generation of Video-LMMs, aiming to make them more robust and reliable when deployed in real-world applications.   </p>
+Based on the results of Video-LMMs on CVRR-ES, we draw key findings and show qualitative results. These insights can serve as valuable guidance for developing the next generation of Video-LMMs, aiming to make them more robust and reliable when deployed in real-world applications and interacting with humans in the wild.   </p>
       <p>
           1) <b> Models excelling at standard VQA benchmarks struggle on CVRR-ES benchmark. </b> Latest open-source Video-LMMs such as Video-LLaVA, MovieChat, and LLaMA-VID which are state-of-the-art on standard VQA benchmarks performs less effectively on the CVRR-ES benchmark.
      This suggests that current VQA benchmarks, like ActivityNet-QA and MSRVTT, do not adequately correlate with the complex video reasoning and robustness scenarios highlighted in our benchmark. Consequently, this also indicates that most newer Video-LMMs are heavily trained to excel on general video comprehension benchmarks while reducing their generalizability, reasoning, and robustness capabilities.
       </p>
                           <p>
-          2) <b> Over-affirmative behavior of open-source Video-LMMs. </b> Another important observation about open-source models is their tendency to exhibit excessively positive and affirmative responses. As shown in Figure below, open-source Video-LMMs consistently respond with "Yes," even when faced with confusing questions that describe non-existent actions and objects. This highlights the vulnerability of these models when interacting with users in real-world scenarios.
+          2) <b> Over-affirmative behavior of open-source Video-LMMs. </b> Another important observation about open-source models is their tendency to exhibit excessively positive and affirmative responses. As shown in Figure below, open-source Video-LMMs consistently respond with "Yes," when faced with simple reasoning questions as well as confusing questions that describe non-existent actions and objects. This highlights the vulnerability of these models when interacting with users in real-world scenarios.
       </p>
                                   <div class="item item-sunflowers">
 
@@ -581,7 +581,7 @@ Based on the results of Video-LMMs on CVRR-ES, we draw key findings and show qua
               </div>
                     <br>
                                               <p>
-          5) <b> Limited understanding of temporal order in complex videos. </b> The CVRR-ES benchmark results show that Video-LMMs perform relatively better on the fine-grained action dimension compared to the time-order understanding dimension. We present failure cases related to this dimension in the Figure below.
+          5) <b> Limited understanding of temporal order in complex videos. </b> The CVRR-ES benchmark results show that Video-LMMs perform relatively better on the fine-grained action dimension compared to the time-order understanding dimension. We present failure cases related to time-order dimension in the Figure below. Majority of open-source Video-LMMs struggle with comprehending the correct temporal order of actions within a video.
       </p>
                                   <div class="item item-sunflowers">
 
