@@ -4,7 +4,7 @@
     <img src="https://i.imgur.com/waxVImv.png" alt="Image">
 </p>
 
-> [**Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs**]() <br>
+> [**Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs**](https://arxiv.org/abs/2405.03690) <br>
 > [Muhammad Uzair Khattak](https://muzairkhattak.github.io/), [Muhammad Ferjad Naeem](https://ferjad.github.io/), [Jameel Hassan](https://jameelhassan.github.io/), [Muzammal Naseer](https://muzammal-naseer.com/), [Federico Tombari](https://federicotombari.github.io/), [Fahad Shahbaz Khan](https://sites.google.com/view/fahadkhans/home), [Salman Khan](https://salman-h-khan.github.io/)
 
 **Mohamed bin Zayed University of AI, ETH Zurich,  Australian National University, Technical University of Munich, Linköping University, Google**
@@ -76,6 +76,20 @@ The widespread adoption of Video-LMMs in our daily lives underscores the importa
 2) **Comprehensive Evaluation:**  We evaluate recent Video-LMMs on the CVRR-ES benchmark and find that most models exhibit weak performance, highlighting their limited reasoning in complex videos and lack of robustness towards user text queries.
 3) **Key Analysis:** We conduct extensive analysis and formulate important conclusions about Video-LMMs based on their failure cases and performance on the CVRR-ES benchmark. Our findings provide valuable insights for building the next generation of human-centric AI systems with improved robustness and reasoning capabilities.
 4) **Dual-Step Contextual Prompting Technique:**  To improve Video-LMMs' reasoning and robustness abilities, we formulate a model-agnostic, training-free prompting technique that effectively enhances their performance on the CVRR-ES benchmark.
+
+### Performance of Video-LMMs on CVRR-ES
+In below table, we present the evaluation results of 9 recent Video-LMMs on the 11 dimension categories of the CVRR-ES benchmark.
+![main figure](assets/main_results.png)
+
+### Effectiveness of DSCP method for improving Video-LMMs performance
+We integrate DSCP technique with Video-LMMs and present results on the CVRR-ES benchmark in below Figure. DSCP improves the model's performance compared with models that use standard prompting (i.e., using only the question itself). Gains of DSCP technique are shown in green.
+
+<img src="./assets/bar_plot_after_rectification.png" alt="app-screen" width="500" align="center">
+
+### Different prompting techniques
+We study the contribution of each step of DSCP and compare it with the chain-of-thought prompting method. The results for the top 5 performing Video-LMMs are shown in the below Table. 
+
+<img src="./assets/different_prompting_techniques.png" alt="app-screen" width="700" align="center">
 
 ## Getting started with CVRR-ES
 
