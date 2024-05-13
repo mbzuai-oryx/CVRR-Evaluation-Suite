@@ -1,10 +1,10 @@
-# Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs
+# How Good is my Video LMM? Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs
 
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="Image">
 </p>
 
-> [**Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs**](https://arxiv.org/abs/2405.03690) <br>
+> [**How Good is my Video LMM? Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs**](https://arxiv.org/abs/2405.03690) <br>
 > [Muhammad Uzair Khattak](https://muzairkhattak.github.io/), [Muhammad Ferjad Naeem](https://ferjad.github.io/), [Jameel Hassan](https://jameelhassan.github.io/), [Muzammal Naseer](https://muzammal-naseer.com/), [Federico Tombari](https://federicotombari.github.io/), [Fahad Shahbaz Khan](https://sites.google.com/view/fahadkhans/home), [Salman Khan](https://salman-h-khan.github.io/)
 
 **Mohamed bin Zayed University of AI, ETH Zurich,  Australian National University, Technical University of Munich, Linköping University, Google**
@@ -47,27 +47,28 @@ Motivated by the expanding wide-scale applications of Video Large Multi-modal Mo
 
 
 
-> **<p align="justify"> Abstract:** *Recent advancements in Large Language Models (LLMs) 
-> have led to the development of Video Large Multi-modal Models (Video-LMMs) that can
-> handle a wide range of video understanding tasks. These models have the potential
-> to be deployed in real-world applications such as robotics, AI assistants, medical 
-> imaging, and autonomous vehicles. 
-The widespread adoption of Video-LMMs in our daily lives underscores the importance
-> of ensuring and evaluating their robust performance in mirroring human-like reasoning
-> and interaction capabilities in complex, real-world contexts. However, existing
-> benchmarks for Video-LMMs primarily focus on general video comprehension 
-> abilities and neglect assessing their reasoning capabilities over complex 
-> videos in the real-world context, and robustness of these models through the
-> lens of user prompts as text queries. In this paper, we present the Complex Video
-> Reasoning and Robustness Evaluation Suite (CVRR-ES), a novel benchmark that comprehensively
-> assesses the performance of Video-LMMs across 11 diverse real-world video dimensions.
-> We evaluate 9 recent models, including both open-source and closed-source variants,
-> and find that most of the Video-LMMs, especially open-source ones, struggle with 
-> robustness and reasoning when dealing with complex videos. Based on our analysis, 
-> we develop a training-free dual-step contextual prompting (DSCP) technique to 
-> enhance the performance of existing Video-LMMs. Our findings provide valuable 
-> insights for building the next generation of human-centric AI systems with advanced
-> robustness and reasoning capabilities. Our dataset and code are publicly available.* </p>
+> **<p align="justify"> Abstract:** *Recent advancements in Large Language Models (LLMs) have led to the development of Video Large Multi-modal Models (Video-LMMs) 
+> that can handle a wide range of video understanding tasks. These models 
+> have the potential to be deployed in real-world applications such as 
+> robotics, AI assistants, medical surgery, and autonomous vehicles. 
+The widespread adoption of Video-LMMs in our daily lives underscores the 
+> importance of ensuring and evaluating their robust performance in 
+> mirroring human-like reasoning and interaction capabilities in complex, 
+> real-world contexts. However, existing benchmarks for Video-LMMs primarily
+> focus on general video comprehension abilities and neglect assessing their
+> reasoning capabilities over complex videos in the real-world context, and
+> robustness of these models through the lens of user prompts as text queries.
+> In this paper, we present the Complex Video Reasoning and Robustness 
+> Evaluation Suite (CVRR-ES), a novel benchmark that comprehensively 
+> assesses the performance of Video-LMMs across 11 diverse real-world video
+> dimensions. We evaluate 9 recent models, including both open-source and
+> closed-source variants, and find that most of the Video-LMMs, especially 
+> open-source ones, struggle with robustness and reasoning when dealing with
+> complex videos. Based on our analysis, we develop a training-free Dual-Step
+> Contextual Prompting (DSCP) technique to enhance the performance of existing
+> Video-LMMs. Our findings provide valuable insights for building the next
+> generation of human-centric AI systems with advanced robustness and 
+> reasoning capabilities. Our dataset and code are publicly available.* </p>
 
 ## CVRR-ES assesses the reasoning and robustness of Video-LMMs on complex videos in real-world contexts.
 
@@ -146,7 +147,7 @@ By using CVRR-ES, you agree not to use the dataset for any harm or unfair discrm
 If you find our work and this repository useful, please consider giving our repo a star and citing our paper as follows:
 ```bibtex
 @article{Khattak2024cvrres,
-    title={Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs},
+    title={How Good is my Video LMM? Complex Video Reasoning and Robustness Evaluation Suite for Video-LMMs},
     author={khattak, Muhammad Uzair and Naeem, Muhammad Ferjad and Hassan, Jameel and Muzzamal, Naseer and Tombari, Federcio and Khan, Fahad Shahbaz and Khan, Salman},
     journal={arXiv:2405.03690},
     year={2024}
