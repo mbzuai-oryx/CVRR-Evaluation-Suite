@@ -24,8 +24,9 @@ Official GitHub repository for the CVRR-Evaluation Suite
 
 
 # :rocket: Release
+* **(June, 2024)**
+  * Added CVRR-ES evaluation results for Gemini Flash and GPT-4o models!
 * **(May 07, 2024)**
-  * Added new CVRR-ES evaluation results for Gemini Flash and GPT-4o models!
   * CVRR-ES evaluation dataset is released.
   * Technical report for CVRR-ES benchmark is released.
   * This repository supports inference codes for [Video-LLaVA](Video-LMMs-Inference/Video-LLaVA), [TimeChat](Video-LMMs-Inference/TimeChat), [Gemini-Pro-Vision (API)](Video-LMMs-Inference/Gemini-Pro-Vision) and [GPT4-Vision (API) models](Video-LMMs-Inference/GPT4(V)).
