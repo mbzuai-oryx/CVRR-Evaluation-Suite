@@ -307,7 +307,7 @@ We curate robustness (from the lens of complex and confusing user queries) and r
 In below table, we present the evaluation results of Video-LMMs on the 11 dimension categories of the CVRR-ES benchmark. For each QA pair of CVRR-ES benchmark, we provide Video-LMM with the question alongside with the corresponding video, which generates prediction answer in an auto-regressive manner. Each QA pair is processed without maintaining the chat history. Finally, the predictions are assessed using a Judge LLM, which determines whether the prediction is correct or incorrect based on the ground-truth answer. </p>
 
   <div style="text-align: center;">
-    <table border="1" cellspacing="0" style="font-size: 12px; width: 1150px; border-collapse: collapse; text-align: center; margin:  auto;">
+    <table border="1" cellspacing="0" style="font-size: 12px; width: 1250px; border-collapse: collapse; text-align: center; margin:  auto;">
 
         <thead>
             <tr>
@@ -320,7 +320,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <th>LLaMA-VID</th>
                 <th>TimeChat</th>
                 <th>Gemini-V Pro</th>
+                <th>Gemini-V Flash</th>
                 <th>GPT4V</th>
+                <th>GPT-4o</th>
                 <th>Human</th>
 
 
@@ -336,7 +338,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>17.92</td>
                 <td>28.30</td>
                 <td>43.08</td>
+                <td>44.65</td>
                 <td>57.55</td>
+                <td>62.89</td>
                 <th>93.40</th>
             </tr>
         </thead>
@@ -351,7 +355,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>26.09</td>
                 <td>39.13 </td>
                 <td>51.61</td>
+                        <td>64.78</td>
                 <td>77.39</td>
+                        <td> 80.43</td>
                 <th>95.65</th>
             </tr>
                     <tr>
@@ -364,7 +370,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>14.56</td>
                 <td>49.51</td>
                 <td>67.48</td>
+                        <td>62.14</td>
                 <td>73.79</td>
+                        <td>77.67</td>
                 <th>98.54</th>
             </tr>
             <tr>
@@ -377,7 +385,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>19.74</td>
                 <td>34.21</td>
                 <td>45.39</td>
+                <td>55.26</td>
                 <td>57.89</td>
+                <td>71.05</td>
                 <th>97.37</th>
             </tr>
             <tr>
@@ -390,7 +400,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>2.90</td>
                 <td>23.19</td>
                 <td>57.25</td>
+                <td>60.14</td>
                 <td>71.01</td>
+                <td> 83.33 </td>
                 <th>97.10</th>
             </tr>
             <tr >
@@ -403,7 +415,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>6.94</td>
                 <td>13.89</td>
                 <td>49.64</td>
+                <td>56.30</td>
                 <td>75.00</td>
+                <td>70.14</td>
                 <th>100.00</th>
             </tr>
             </tr>
@@ -417,6 +431,8 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>24.86</td>
                 <td>34.46</td>
                 <td>36.16</td>
+                <td>43.50</td>
+                <td>62.71</td>
                 <td>62.71</td>
                 <th>96.49</th>
             </tr>
@@ -431,7 +447,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>16.32</td>
                 <td>27.37</td>
                 <td>60.00</td>
+                <td>60.53</td>
                 <td>74.74</td>
+                <td>78.42</td>
                 <th>96.84</th>
             </tr>
                     </tr>
@@ -445,7 +463,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>13.93</td>
                 <td>39.29</td>
                 <td>64.29</td>
+                <td>69.64</td>
                 <td>79.64</td>
+                <td>83.57 </td>
                 <th>97.51</th>
             </tr>
                     </tr>
@@ -459,7 +479,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>14.73</td>
                 <td>27.40</td>
                 <td>47.26</td>
+                <td>52.74</td>
                 <td>66.44</td>
+                <td> 70.89 </td>
                 <th>95.55</th>
             </tr>
             <tr >
@@ -472,7 +494,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>23.08</td>
                 <td>45.05</td>
                 <td>63.00</td>
+                <td>57.51</td>
                 <td>82.42</td>
+                <td>84.25</td>
                 <th>94.87</th>
             </tr>
             <tr style="background-color: #e6e6ff;">
@@ -485,7 +509,9 @@ In below table, we present the evaluation results of Video-LMMs on the 11 dimens
                 <td>16.46</td>
                 <td>32.89</td>
                 <td>53.20</td>
+                <td>57.51</td>
                 <td>70.78</td>
+                <td>75.03</td>
                 <th>96.67</th>
             </tr>
         </tbody>
