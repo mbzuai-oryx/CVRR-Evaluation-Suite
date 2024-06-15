@@ -36,7 +36,7 @@ def annotate(prediction_set, filename, output_dir):
             try:
                 # Compute the correctness score
                 completion = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
+                    model="GPT-3.5-turbo-0125",
                     messages=[
                         {
                             "role": "system",
