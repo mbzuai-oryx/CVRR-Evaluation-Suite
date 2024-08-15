@@ -96,9 +96,10 @@ We study the contribution of each step of DSCP and compare it with the chain-of-
 
 ## Getting started with CVRR-ES
 
-### Download CVRR-ES Dataset
+### Downloading and Setting Up CVRR-ES Dataset
 
-CVRR-ES dataset can be downloaded [using this link (zipped)](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/uzair_khattak_mbzuai_ac_ae/EktDA83_8UxJrc23DQfrfv8Bvw41YxWVBgD3Fapxs69rRg?e=8Nm0Rf). CVRR-ES benchmark consists of 2400 open-ended question-answer (QA) pairs spanning over 214 unique videos and covers 11 diverse evaluation dimensions.
+Set up the CVRR-ES dataset by following the below steps. 
+1) CVRR-ES dataset can be downloaded [using this link (zipped)](https://mbzuaiac-my.sharepoint.com/:f:/g/personal/uzair_khattak_mbzuai_ac_ae/EktDA83_8UxJrc23DQfrfv8Bvw41YxWVBgD3Fapxs69rRg?e=8Nm0Rf). CVRR-ES benchmark consists of 2400 open-ended question-answer (QA) pairs spanning over 214 unique videos and covers 11 diverse evaluation dimensions.
 After unzipping, the CVRR-ES dataset structure looks like the following:
 
 ```
@@ -123,7 +124,12 @@ CVRR-ES/
 
 Here, each folder corresponds to a single video evaluation dimension and contains annotations (QA pairs and captions) alongside videos. 
 
+Now note that videos utilized from [Something-Something V2 Dataset](https://developer.qualcomm.com/software/ai-datasets/something-something) (SSv2) have been not included in the zipped folder due to copyright policies. In order to complete the dataset, first:
 
+2) Download SSv2 dataset from [official website](https://developer.qualcomm.com/software/ai-datasets/something-something) (it is publicly available). You will be prompted to register yourself by creating an account. 
+
+3) Identify the videos for CVRR-ES dataset by retrieving the videos with ids given in [this text file](assets/ssv2_videos.csv).
+4) Rename the videos following the mapping in the text file and add them to their respective evaluation dimension folder in the unzipped CVRR-ES folder. 
 ### Evaluating Video-LMMs on CVRR-Evaluation Suite
 To evaluate Video-LMMs on the CVRR-ES benchmark, please follow the following steps:
 
@@ -136,7 +142,15 @@ For each QA pair, we generate answers from Video-LMMs in an autoregressive manne
 
 #### 2) Comparing the Predicted Answers with Ground-Truth Answers using LLM-Assisted evaluation
 Once the answer predictions are generated from step 1, we utilize LLM as a Judge to measure/quantify the correctness of Video-LMMs prediction for each question in the CVRR-Evaluation Suite. Please follow the instructions in [LLM_SCORING.md](assets/LLM_SCORING.md) for using LMM-Assisted evaluation. 
+<hr />
 
+## Additional Assets for LLM based QA generation process:
+
+#### Generating LLM based question-answer pairs from video-caption pairs for CVRR-ES
+
+The first version of the CVRR-ES dataset is already finalized. However, for additional reference, we are providing code snippets alongside LLM prompts that we used to generate the initial set of QA pairs.
+
+Please refer to [QA_GENERATION.md](assets/QA_GENERATION.md) for instructions and sample code on generating question-answer pairs for CVRR-ES videos using LLM.
 
 <hr />
 
